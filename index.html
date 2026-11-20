@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NGETIK.ID - Internet Speed Test</title>
+<meta name="description" content="NGETIK.ID Internet Speed Test - Cek kecepatan download, upload, ping, dan kualitas koneksi internet Anda.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">NGETIK<span>.ID</span></a>
+    <nav aria-label="Menu">
+      <a href="#speedtest">Speedtest</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <p class="kicker">NGETIK.ID</p>
+    <h1>Internet Speed Test</h1>
+    <p class="sub">Test your internet connection quickly and accurately.</p>
+  </section>
+
+  <section class="test" id="speedtest">
+    <div class="gauge">
+      <svg viewBox="0 0 220 220" aria-hidden="true">
+        <circle class="g-track" cx="110" cy="110" r="92" pathLength="100"/>
+        <circle class="g-fill" id="gaugeFill" cx="110" cy="110" r="92" pathLength="100"/>
+      </svg>
+      <div class="gauge-value">
+        <strong id="speedValue">0.00</strong>
+        <span>Mbps</span>
+        <em id="phase">&nbsp;</em>
+      </div>
+    </div>
+    <button class="btn" id="startBtn">START TEST</button>
+    <p class="error" id="error" role="alert" hidden></p>
+  </section>
+
+  <section class="results" aria-label="Hasil">
+    <div class="card"><span>DOWNLOAD</span><strong id="rDown">-</strong><small>Mbps</small></div>
+    <div class="card"><span>UPLOAD</span><strong id="rUp">-</strong><small>Mbps</small></div>
+    <div class="card"><span>PING</span><strong id="rPing">-</strong><small>ms</small></div>
+    <div class="card"><span>JITTER</span><strong id="rJitter">-</strong><small>ms</small></div>
+  </section>
+
+  <section class="server">
+    <h2>Server</h2>
+    <p class="server-name" id="sName">-</p>
+    <p class="muted" id="sLoc">&nbsp;</p>
+    <p class="status" id="sStatus">Finding fastest server...</p>
+    <p class="muted small" id="sNote" hidden></p>
+  </section>
+
+  <section class="panel">
+    <div class="box">
+      <h2>Connection</h2>
+      <dl>
+        <div><dt>IP Address</dt><dd id="iIp">-</dd></div>
+        <div><dt>ISP</dt><dd id="iIsp">-</dd></div>
+        <div><dt>Server</dt><dd id="iServer">-</dd></div>
+        <div><dt>Location</dt><dd id="iLoc">-</dd></div>
+      </dl>
+    </div>
+    <div class="box">
+      <h2>Last Test</h2>
+      <dl id="last"><p class="muted">Belum ada test.</p></dl>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <p>NGETIK.ID mengukur kecepatan download, upload, ping, dan jitter langsung dari browser Anda.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <strong>NGETIK.ID</strong>
+  <p>Internet Speed Test</p>
+  <p class="muted">© 2026 NGETIK.ID</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
